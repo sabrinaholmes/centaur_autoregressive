@@ -1,0 +1,9 @@
+# Ignore environment variables
+.env
+env
+
+#ignore cache
+__pycache__
+
+#ignore clusters log
+logs/
