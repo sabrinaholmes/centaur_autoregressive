@@ -1,0 +1,400 @@
+trial_num,prompt,choice,reward,cumulative_reward
+1,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<",P,1,1
+2,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",U,1,2
+3,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",P,0,2
+4,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 0 points.
+You press <<",P,1,3
+5,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",U,1,4
+6,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,5
+7,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,6
+8,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",P,0,6
+9,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 0 points.
+You press <<",U,1,7
+10,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",P,1,8
+11,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",U,1,9
+12,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",P,1,10
+13,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",U,1,11
+14,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,12
+15,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,13
+16,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,14
+17,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,15
+18,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",P,0,15
+19,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 0 points.
+You press <<",U,1,16
+20,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,17
+21,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",P,0,17
+22,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 0 points.
+You press <<",U,1,18
+23,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,19
+24,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,20
+25,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,21
+26,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,22
+27,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,23
+28,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,24
+29,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,25
+30,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,26
+31,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",P,0,26
+32,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 0 points.
+You press <<",U,1,27
+33,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,28
+34,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,29
+35,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",P,0,29
+36,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 0 points.
+You press <<",U,1,30
+37,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,31
+38,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,32
+39,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,33
+40,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",P,0,33
+41,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 0 points.
+You press <<",U,1,34
+42,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,35
+43,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,36
+44,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,37
+45,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,38
+46,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,39
+47,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",P,0,39
+48,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 0 points.
+You press <<",U,1,40
+49,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,41
+50,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,42
+51,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",P,1,43
+52,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,44
+53,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",U,0,44
+54,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 0 points.
+You press <<",P,1,45
+55,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",U,0,45
+56,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 0 points.
+You press <<",P,1,46
+57,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",U,0,46
+58,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 0 points.
+You press <<",P,1,47
+59,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,48
+60,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,49
+61,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,50
+62,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,51
+63,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",U,1,52
+64,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,0,52
+65,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 0 points.
+You press <<",P,1,53
+66,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,54
+67,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,55
+68,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,56
+69,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,57
+70,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,58
+71,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,59
+72,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,60
+73,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,61
+74,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,62
+75,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,63
+76,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,64
+77,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,65
+78,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,66
+79,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,67
+80,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",U,0,67
+81,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 0 points.
+You press <<",U,0,67
+82,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 0 points.
+You press <<",P,1,68
+83,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,69
+84,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,70
+85,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,71
+86,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,72
+87,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,73
+88,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",U,1,74
+89,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,75
+90,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,1,76
+91,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 1 points.
+You press <<",U,0,76
+92,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 0 points.
+You press <<",P,1,77
+93,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,78
+94,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",U,0,78
+95,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 0 points.
+You press <<",P,1,79
+96,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",U,0,79
+97,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 0 points.
+You press <<",P,1,80
+98,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",P,1,81
+99,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<P> and get 1 points.
+You press <<",U,0,81
+100,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
+You can choose a slot machine by pressing its corresponding key.When you select one of the machines, you will win 1 or 0 points.Your goal is to choose the slot machines that will give you the most points.You will receive feedback about the outcome after making a choice.
+The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine.You will play 1 game in total, consisting of 100 trials. Game 1:You press <<U> and get 0 points.
+You press <<",P,1,82

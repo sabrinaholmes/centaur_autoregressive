@@ -297,7 +297,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<",P,0,10
+You press <<",U,1,11
 24,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -321,8 +321,8 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
-You press <<",U,1,11
+You press <<U> and get 1 points.
+You press <<",U,1,12
 25,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -346,9 +346,9 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
 You press <<U> and get 1 points.
-You press <<",U,1,12
+You press <<U> and get 1 points.
+You press <<",U,1,13
 26,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -372,10 +372,10 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
-You press <<",P,1,13
+You press <<U> and get 1 points.
+You press <<",P,1,14
 27,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -399,11 +399,11 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",P,0,13
+You press <<",P,0,14
 28,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -427,12 +427,12 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 0 points.
-You press <<",P,0,13
+You press <<",P,0,14
 29,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -456,13 +456,13 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<",U,1,14
+You press <<",U,1,15
 30,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -486,14 +486,14 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<U> and get 1 points.
-You press <<",U,1,15
+You press <<",U,1,16
 31,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -517,7 +517,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -525,7 +525,7 @@ You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
-You press <<",P,0,15
+You press <<",P,0,16
 32,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -549,7 +549,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -558,7 +558,7 @@ You press <<P> and get 0 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 0 points.
-You press <<",U,1,16
+You press <<",U,1,17
 33,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -582,7 +582,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -592,7 +592,7 @@ You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<U> and get 1 points.
-You press <<",P,0,16
+You press <<",P,0,17
 34,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -616,7 +616,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -627,7 +627,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<U> and get 1 points.
 You press <<P> and get 0 points.
-You press <<",U,1,17
+You press <<",U,1,18
 35,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -651,7 +651,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -663,7 +663,7 @@ You press <<P> and get 0 points.
 You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<U> and get 1 points.
-You press <<",U,1,18
+You press <<",U,1,19
 36,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -687,7 +687,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -700,7 +700,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
-You press <<",P,0,18
+You press <<",P,0,19
 37,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -724,7 +724,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -738,7 +738,7 @@ You press <<P> and get 0 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 0 points.
-You press <<",U,1,19
+You press <<",U,1,20
 38,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -762,7 +762,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -777,7 +777,7 @@ You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<U> and get 1 points.
-You press <<",P,0,19
+You press <<",P,0,20
 39,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -801,7 +801,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -817,7 +817,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<U> and get 1 points.
 You press <<P> and get 0 points.
-You press <<",P,0,19
+You press <<",P,0,20
 40,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -841,7 +841,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -858,7 +858,7 @@ You press <<P> and get 0 points.
 You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<",P,0,19
+You press <<",P,0,20
 41,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -882,7 +882,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -900,7 +900,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<",U,1,20
+You press <<",U,1,21
 42,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -924,7 +924,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -943,7 +943,7 @@ You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<U> and get 1 points.
-You press <<",U,1,21
+You press <<",U,1,22
 43,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -967,7 +967,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -987,7 +987,7 @@ You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
-You press <<",U,1,22
+You press <<",U,1,23
 44,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1011,7 +1011,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1032,7 +1032,7 @@ You press <<P> and get 0 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
-You press <<",P,0,22
+You press <<",P,0,23
 45,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1056,7 +1056,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1078,7 +1078,7 @@ You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 0 points.
-You press <<",U,1,23
+You press <<",U,1,24
 46,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1102,7 +1102,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1125,7 +1125,7 @@ You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<U> and get 1 points.
-You press <<",U,1,24
+You press <<",U,1,25
 47,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1149,7 +1149,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1173,7 +1173,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
-You press <<",U,1,25
+You press <<",U,1,26
 48,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1197,7 +1197,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1222,7 +1222,7 @@ You press <<P> and get 0 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
-You press <<",U,1,26
+You press <<",U,1,27
 49,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1246,7 +1246,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1272,7 +1272,7 @@ You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
-You press <<",P,0,26
+You press <<",P,0,27
 50,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1296,7 +1296,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1323,7 +1323,7 @@ You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 0 points.
-You press <<",U,1,27
+You press <<",U,1,28
 51,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1347,7 +1347,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1375,7 +1375,7 @@ You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<U> and get 1 points.
-You press <<",P,1,28
+You press <<",P,1,29
 52,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1399,7 +1399,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1428,7 +1428,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",P,1,29
+You press <<",P,1,30
 53,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1452,7 +1452,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1482,7 +1482,7 @@ You press <<P> and get 0 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",P,1,30
+You press <<",P,1,31
 54,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1506,7 +1506,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1537,7 +1537,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",U,0,30
+You press <<",U,0,31
 55,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1561,7 +1561,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1593,7 +1593,7 @@ You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
-You press <<",P,1,31
+You press <<",P,1,32
 56,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1617,7 +1617,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1650,7 +1650,7 @@ You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
-You press <<",U,0,31
+You press <<",U,0,32
 57,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1674,7 +1674,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1708,7 +1708,7 @@ You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
-You press <<",U,0,31
+You press <<",U,0,32
 58,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1732,7 +1732,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1767,7 +1767,7 @@ You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<U> and get 0 points.
-You press <<",P,1,32
+You press <<",P,1,33
 59,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1791,7 +1791,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1827,7 +1827,7 @@ You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
-You press <<",P,1,33
+You press <<",P,1,34
 60,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1851,7 +1851,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1888,7 +1888,7 @@ You press <<U> and get 0 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",U,1,34
+You press <<",U,1,35
 61,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1912,7 +1912,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -1950,7 +1950,7 @@ You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 1 points.
-You press <<",U,0,34
+You press <<",U,0,35
 62,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -1974,7 +1974,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -2013,7 +2013,7 @@ You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 0 points.
-You press <<",P,1,35
+You press <<",P,1,36
 63,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -2037,7 +2037,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -2077,7 +2077,7 @@ You press <<P> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
-You press <<",U,1,36
+You press <<",U,1,37
 64,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -2101,7 +2101,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -2142,7 +2142,7 @@ You press <<U> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<U> and get 1 points.
-You press <<",P,1,37
+You press <<",P,1,38
 65,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -2166,7 +2166,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -2208,7 +2208,7 @@ You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",U,0,37
+You press <<",U,0,38
 66,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -2232,7 +2232,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -2275,7 +2275,7 @@ You press <<P> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
-You press <<",P,1,38
+You press <<",P,1,39
 67,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -2299,7 +2299,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -2343,7 +2343,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
-You press <<",P,1,39
+You press <<",P,1,40
 68,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -2367,7 +2367,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -2412,7 +2412,7 @@ You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",P,1,40
+You press <<",P,1,41
 69,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -2436,7 +2436,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -2482,7 +2482,7 @@ You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",P,1,41
+You press <<",P,1,42
 70,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -2506,7 +2506,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -2553,7 +2553,7 @@ You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",P,1,42
+You press <<",P,1,43
 71,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -2577,7 +2577,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -2625,7 +2625,7 @@ You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",P,1,43
+You press <<",P,1,44
 72,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -2649,7 +2649,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -2698,7 +2698,7 @@ You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",U,0,43
+You press <<",U,0,44
 73,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -2722,7 +2722,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -2772,7 +2772,7 @@ You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
-You press <<",P,1,44
+You press <<",P,1,45
 74,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -2796,7 +2796,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -2847,7 +2847,7 @@ You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
-You press <<",U,0,44
+You press <<",U,0,45
 75,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -2871,7 +2871,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -2923,7 +2923,7 @@ You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
-You press <<",P,1,45
+You press <<",P,1,46
 76,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -2947,7 +2947,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -3000,7 +3000,7 @@ You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
-You press <<",P,1,46
+You press <<",P,1,47
 77,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -3024,7 +3024,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -3078,7 +3078,7 @@ You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",P,1,47
+You press <<",P,1,48
 78,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -3102,7 +3102,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -3157,7 +3157,7 @@ You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",U,0,47
+You press <<",U,0,48
 79,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -3181,7 +3181,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -3237,7 +3237,7 @@ You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
-You press <<",P,1,48
+You press <<",P,1,49
 80,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -3261,7 +3261,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -3318,7 +3318,7 @@ You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
-You press <<",P,1,49
+You press <<",P,1,50
 81,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -3342,7 +3342,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -3400,7 +3400,7 @@ You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",P,1,50
+You press <<",P,1,51
 82,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -3424,7 +3424,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -3483,7 +3483,7 @@ You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",P,1,51
+You press <<",P,1,52
 83,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -3507,7 +3507,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -3567,7 +3567,7 @@ You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",U,0,51
+You press <<",U,0,52
 84,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -3591,7 +3591,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -3652,7 +3652,7 @@ You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
-You press <<",P,1,52
+You press <<",P,1,53
 85,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -3676,7 +3676,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -3738,7 +3738,7 @@ You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
-You press <<",P,1,53
+You press <<",P,1,54
 86,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -3762,7 +3762,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -3825,7 +3825,7 @@ You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",P,1,54
+You press <<",P,1,55
 87,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -3849,7 +3849,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -3913,7 +3913,7 @@ You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",P,1,55
+You press <<",P,1,56
 88,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -3937,7 +3937,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -4002,7 +4002,7 @@ You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",U,1,56
+You press <<",U,1,57
 89,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -4026,7 +4026,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -4092,7 +4092,7 @@ You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 1 points.
-You press <<",P,0,56
+You press <<",P,0,57
 90,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -4116,7 +4116,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -4183,7 +4183,7 @@ You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 0 points.
-You press <<",U,1,57
+You press <<",U,1,58
 91,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -4207,7 +4207,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -4275,7 +4275,7 @@ You press <<P> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<U> and get 1 points.
-You press <<",P,1,58
+You press <<",P,1,59
 92,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -4299,7 +4299,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -4368,7 +4368,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",U,0,58
+You press <<",U,0,59
 93,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -4392,7 +4392,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -4462,7 +4462,7 @@ You press <<P> and get 0 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
-You press <<",P,1,59
+You press <<",P,1,60
 94,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -4486,7 +4486,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -4557,7 +4557,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
-You press <<",P,1,60
+You press <<",P,1,61
 95,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -4581,7 +4581,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -4653,7 +4653,7 @@ You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",U,0,60
+You press <<",U,0,61
 96,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -4677,7 +4677,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -4750,7 +4750,7 @@ You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
-You press <<",P,1,61
+You press <<",P,1,62
 97,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -4774,7 +4774,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -4848,7 +4848,7 @@ You press <<P> and get 1 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
-You press <<",U,0,61
+You press <<",U,0,62
 98,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -4872,7 +4872,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -4947,7 +4947,7 @@ You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
-You press <<",P,1,62
+You press <<",P,1,63
 99,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -4971,7 +4971,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -5047,7 +5047,7 @@ You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
-You press <<",P,1,63
+You press <<",P,1,64
 100,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<U> and get 1 points.
 You press <<P> and get 0 points.
@@ -5071,7 +5071,7 @@ You press <<U> and get 1 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
 You press <<P> and get 0 points.
-You press <<P> and get 0 points.
+You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<U> and get 1 points.
 You press <<P> and get 1 points.
@@ -5148,4 +5148,4 @@ You press <<P> and get 1 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<P> and get 1 points.
-You press <<",P,1,64
+You press <<",P,1,65

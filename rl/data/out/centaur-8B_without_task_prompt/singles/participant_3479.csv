@@ -4750,7 +4750,7 @@ You press <<U> and get 0 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
-You press <<",U,0,61
+You press <<",P,1,62
 97,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<P> and get 1 points.
 You press <<U> and get 1 points.
@@ -4847,8 +4847,8 @@ You press <<U> and get 0 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
-You press <<U> and get 0 points.
-You press <<",P,1,62
+You press <<P> and get 1 points.
+You press <<",P,1,63
 98,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<P> and get 1 points.
 You press <<U> and get 1 points.
@@ -4945,9 +4945,9 @@ You press <<U> and get 0 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
-You press <<U> and get 0 points.
 You press <<P> and get 1 points.
-You press <<",U,0,62
+You press <<P> and get 1 points.
+You press <<",P,1,64
 99,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<P> and get 1 points.
 You press <<U> and get 1 points.
@@ -5044,10 +5044,10 @@ You press <<U> and get 0 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
-You press <<U> and get 0 points.
 You press <<P> and get 1 points.
-You press <<U> and get 0 points.
-You press <<",P,1,63
+You press <<P> and get 1 points.
+You press <<P> and get 1 points.
+You press <<",P,1,65
 100,"In this task, you have to repeatedly choose between two slot machines labeled U and P.
 You can choose a slot machine by pressing its corresponding key.You press <<P> and get 1 points.
 You press <<U> and get 1 points.
@@ -5144,8 +5144,8 @@ You press <<U> and get 0 points.
 You press <<U> and get 0 points.
 You press <<P> and get 1 points.
 You press <<U> and get 0 points.
-You press <<U> and get 0 points.
 You press <<P> and get 1 points.
-You press <<U> and get 0 points.
 You press <<P> and get 1 points.
-You press <<",U,1,64
+You press <<P> and get 1 points.
+You press <<P> and get 1 points.
+You press <<",U,1,66
