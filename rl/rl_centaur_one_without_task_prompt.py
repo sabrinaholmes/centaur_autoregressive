@@ -1,18 +1,14 @@
 import transformers
-
 import pandas as pd
 import numpy as np
 import random
 import torch
-import torch.nn.functional as F
 import get_models
 import os
 import gc
 
-DATA_IN_TEST = 'data/in/test_data.csv'
 
-MODEL = 'centaur-70B'
-DATA_FOLDER_OUT = f'data/out/predictive_without_task/{MODEL}/singles'
+MODEL = 'centaur-8B'
 
 def generate_seeds(num_seeds=20, seed=42):
     """Generates a list of random seeds.
@@ -62,6 +58,13 @@ def extract_model_choice(raw_response: str) -> str:
     # Clean up the raw response by removing leading/trailing whitespace and quotes
     cleaned_response = raw_response.strip().strip('"')
     return cleaned_response
+
+def format_past_trials(past_trials: list) -> str:
+    """Formats past trial data for the prompt by listing choice, reward, and cumulative reward."""
+    return "".join(
+        f"Trial {trial['trial_num']}:Choice {trial['choice']}  → {trial['reward']} points, "
+        for trial in past_trials
+    )
 
 #add prompt without task instruction
 def build_slot_prompt_without_instruction(current_trial: int, past_trials: list, total_trials: int) -> str:
@@ -119,7 +122,41 @@ def build_slot_prompt_zeroshot(current_trial: int, past_trials: list, total_tria
     prompt += f"You press <<"
     return prompt
 
+def generate_timeline(num_trials=100, seed=42):
+    """Generates a timeline of trials for the slot machine task.
 
+    Args:
+        num_trials: The number of trials to generate.
+        seed: The initial seed for the random number generator (for reproducibility).
+
+    Returns:
+        A DataFrame containing the trial data with columns: 'trial', 'choice', 'reward'.
+    """
+    random.seed(42)
+
+    # Number of trials
+    num_trials = 100
+
+    # Define the timeline
+    timeline = []
+    for i in range(num_trials):
+        while True:
+            if i < (num_trials / 2):
+                bandit_1_reward = random.choices([1, 0], weights=[0.8, 0.2])[0]
+                bandit_2_reward = random.choices([1, 0], weights=[0.2, 0.8])[0]
+            else:
+                bandit_1_reward = random.choices([1, 0], weights=[0.2, 0.8])[0]
+                bandit_2_reward = random.choices([1, 0], weights=[0.8, 0.2])[0]
+
+            if not (bandit_1_reward == 0 and bandit_2_reward == 0):
+                break
+
+        timeline.append({
+            "bandit_1": {"color": "orange", "value": bandit_1_reward},
+            "bandit_2": {"color": "blue", "value": bandit_2_reward}
+        })
+    return timeline
+    
 def fix_seed(seed: int):
     """Fixes the random seed for reproducibility."""
     torch.manual_seed(seed)
@@ -137,102 +174,59 @@ def generate(prompt: str, pipe: transformers.pipeline) -> str:
     """
     return pipe(prompt)[0]['generated_text'][len(prompt):]
 
-def simulate_participant(df_participant: pd.DataFrame, build_slot_prompt, model, tokenizer, pipe, letter_token_ids):
+def simulate_participant(timeline:list,pipe:transformers.pipeline,build_slot_prompt: callable) -> pd.DataFrame:
     """Simulates a participant with log-likelihood tracking"""
     history = []
     cumulative_reward = 0
-    total_trials = len(df_participant)
+    total_trials = 100
 
 
-    for trial in range(total_trials):
-        row = df_participant.iloc[trial]
-        trial_num = row['trial']
-        human_choice = row['choice']
-        reward = row['reward']
+    for trial in range(1,total_trials+1):
+        current_trial_data = timeline[trial - 1]  # Ensure `timeline` is defined
+        prompt_model = build_slot_prompt(trial, history, total_trials)
+        bandit_1_value = current_trial_data["bandit_1"]["value"]
+        bandit_2_value = current_trial_data["bandit_2"]["value"]
+        #print(f"this is {prompt_model}")
+        choice_raw = generate(prompt_model,pipe)
+        #print(f"this is choice raw {choice_raw}")
+        model_choice = extract_model_choice(choice_raw)
+        print(f"this is model choice {model_choice}")
+
+        # Determine reward
+        reward = bandit_1_value if model_choice == 'U' else (bandit_2_value if model_choice == 'P' else 0)
         cumulative_reward += reward
+        #outputs=generate_test(prompt_model,pipe)
+        #print(f"this is whole output {outputs}")
 
-        # Build prompt using actual human history
-        past_trials = []
-        for past_idx in range(trial):
-            past_row = df_participant.iloc[past_idx]
-            past_trials.append({
-                "trial": past_row['trial'],
-                "choice": past_row['choice'],
-                "reward": past_row['reward'],
-                "cumulative_reward": df_participant.iloc[:past_idx+1]['reward'].sum()
-            })
-
-        prompt = build_slot_prompt(trial_num, past_trials, total_trials)
-
-         # --- Run model on prompt ---
-        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-        with torch.no_grad():
-            outputs = model(**inputs)
-
-        logits = outputs.logits[0, -1]
-        probs = F.softmax(logits, dim=-1)
-        pred_token_id = torch.argmax(probs).item()
-        # Top-k tokens
-        # Top-2 tokens and their probabilities
-        topk = torch.topk(probs, k=2)
-        top2_tokens = []
-        for idx, prob in zip(topk.indices, topk.values):
-            decoded_token = tokenizer.decode(idx.item()).strip()
-            top2_tokens.append({
-                "token": decoded_token,
-                "prob": prob.item()
-            })
-
-
-        # --- Map to model choice (U or P) ---
-        token_id_to_letter = {v: k for k, v in letter_token_ids.items()}
-        model_choice = token_id_to_letter.get(pred_token_id, "INVALID")
-        # --- Log-likelihood of human’s actual choice ---
-        log_likelihood = None
-        if human_choice in letter_token_ids:
-            user_token_id = letter_token_ids[human_choice]
-            log_likelihood = torch.log(probs[user_token_id] + 1e-8).item() # Fixed: Use token ID for indexing
-
-        # --- Get the actual reward (from human data) ---
-        # The reward is already taken from the dataframe at the beginning of the loop
-        # reward = df.loc[df["trial"] == trial, "reward"].values[0]
-        # cumulative_reward += reward # Cumulative reward is updated earlier
+        print(f"Trial {trial}: "
+              f"Choice {model_choice}, "
+              f"Reward {reward}, "
+              #f"Reasoning {model_reasoning} "
+              f"Total {cumulative_reward}")
 
         history.append({
             "trial_num": trial,
-            "prompt": prompt,
-            "model_choice": model_choice,
-            "human_choice": human_choice,
+            "prompt": prompt_model,
+            "choice": model_choice,
             "reward": reward,
             "cumulative_reward": cumulative_reward,
-            "log_likelihood": log_likelihood,
-            "top2_tokens": top2_tokens
         })
-        print(f"Trial {trial}: Human {human_choice}, Model {model_choice}, LL: {log_likelihood}")
+
+
 
     return pd.DataFrame(history)
 
 
 
-def main():
-    """
-    Main function to run the RL simulation.
-    """
+def main():    
+    """Main function to run the RL simulation."""
     seeds = generate_seeds(num_seeds=32)
-
-    model, tokenizer = get_models.get_model_no_pipe(MODEL)
-    pipe = create_text_generation_pipeline(model, tokenizer, max_new_tokens=1)
-
-    timeline = pd.read_csv(DATA_IN_TEST)
-    timeline['choice'] = timeline['choice'].map({0: 'U', 1: 'P'})
-    model_ids = timeline['model_id'].unique()
-
-    fix_seed(seeds[0])
-
-    letter_token_ids = {
-    "U": tokenizer("U", add_special_tokens=False)['input_ids'][0],
-    "P": tokenizer("P", add_special_tokens=False)['input_ids'][0],
-}
+    timeline = generate_timeline(num_trials=100)
+    # Initialize new model for each seed
+    model,tokenizer = get_models.get_model_no_pipe(MODEL)
+    model._past = None  # Reset past states if necessary
+    torch.cuda.empty_cache()  # Clear GPU memory again
+    pipe=create_text_generation_pipeline(model,tokenizer,max_new_tokens=1)
     test_cases=['zero-shot','last-trial','without_task_prompt']
     for test in test_cases:
         if test == 'zero-shot':
@@ -241,29 +235,28 @@ def main():
             build_slot_prompt = build_slot_prompt_last_trial
         elif test == 'without_task_prompt':
             build_slot_prompt = build_slot_prompt_without_instruction
-    
+
         #create test folder
-        test_folder = f"data/out/predictive/{MODEL}_{test}/singles"
+        test_folder = f"data/out/{MODEL}_{test}/singles"
         os.makedirs(test_folder, exist_ok=True)
 
         # Run simulation for each seed
-        for model_id in model_ids:
-            out_path = os.path.join(test_folder, f'participant_{model_id}.csv')
+        for run_id, seed in enumerate(seeds):
+            out_path = os.path.join(test_folder, f'participant_{seed}.csv')
             if os.path.exists(out_path):
-                print(f"Participant {model_id} already simulated for {test}. Skipping...")
+                print(f"Participant {seed} already simulated for {test}. Skipping...")
                 continue
             gc.collect()
             torch.cuda.empty_cache()
+            fix_seed(seed)  # Ensure reproducibility
+            torch.cuda.empty_cache()  # Clear GPU memory before loading model
             # Run simulation
-            # Run simulation with model and tokenizer passed
-            model_data = timeline[timeline['model_id'] == model_id]
-            result = simulate_participant(model_data, build_slot_prompt, model, tokenizer, pipe, letter_token_ids)
+            history = simulate_participant(timeline,pipe,build_slot_prompt)
             # Save results
-            result.to_csv(out_path, index=False)
+            history.to_csv(out_path, index=False)
             # Cleanup: delete model and clear memory
             gc.collect()
             torch.cuda.empty_cache()
-
 
 
 if __name__ == "__main__":
