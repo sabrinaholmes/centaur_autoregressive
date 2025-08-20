@@ -11,8 +11,8 @@ import gc
 
 DATA_IN_TEST = 'data/in/test_data.csv'
 
-MODEL = 'centaur-70B'
-DATA_FOLDER_OUT = f'data/out/predictive_without_task/{MODEL}/singles'
+MODEL = 'centaur-8B'
+DATA_FOLDER_OUT = f'data/out/predictive_without_task_and_choice/{MODEL}/singles'
 
 def generate_seeds(num_seeds=20, seed=42):
     """Generates a list of random seeds.
@@ -74,7 +74,7 @@ def build_slot_prompt_without_instruction(current_trial: int, past_trials: list,
 
     # Add history of past trials to the prompt
     for past_trial in recent_trials:
-        prompt += f"You press <<{past_trial['choice']}> and get {past_trial['reward']} points.\n"
+        prompt += f"You press <<{past_trial['choice']}>>.\n"
 
     # Add the current choice prompt
     prompt += f"You press <<"
@@ -234,7 +234,8 @@ def main():
     "P": tokenizer("P", add_special_tokens=False)['input_ids'][0],
 }
     test_cases=['zero-shot','last-trial','without_task_prompt']
-    for test in test_cases:
+    test_cases_no_choice=['without_task_prompt']
+    for test in test_cases_no_choice:
         if test == 'zero-shot':
             build_slot_prompt = build_slot_prompt_zeroshot
         elif test == 'last-trial':
@@ -243,7 +244,7 @@ def main():
             build_slot_prompt = build_slot_prompt_without_instruction
     
         #create test folder
-        test_folder = f"data/out/predictive/{MODEL}_{test}/singles"
+        test_folder = f"data/out/predictive/{MODEL}_{test}_without_rewards/singles"
         os.makedirs(test_folder, exist_ok=True)
 
         # Run simulation for each seed

@@ -1,13 +1,13 @@
 #!/bin/bash
-#SBATCH --job-name=horizon_70b
+#SBATCH --job-name=rl
 #SBATCH --partition=A100-80GB
-#SBATCH --output=logs/chorizon_test_%j.log
+#SBATCH --output=logs/rl%j.log
 #SBATCH --time=6:00:00
-#SBATCH --mem=300gb
+#SBATCH --mem=400gb
 #SBATCH --ntasks=1
 #SBATCH --gpus=2
 #SBATCH --gpus-per-task=2
-#SBATCH --cpus-per-task=20
+#SBATCH --cpus-per-task=30
 #SBATCH --gpu-bind=none
 #SBATCH --mail-user=sana04@dfki.de
 #SBATCH --mail-type=ALL
@@ -24,5 +24,5 @@ srun \
     echo 'Activating virtual environment' &&
     source ../.env/bin/activate &&
     echo 'Running script...' &&
-    python rl_llama_one.py \
+    python rl_centaur_one_without_task_prompt.py \
   "
