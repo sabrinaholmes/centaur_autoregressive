@@ -8,7 +8,7 @@ import os
 import gc
 
 
-MODEL = 'centaur-8B'
+MODEL = 'centaur-70B'
 
 def generate_seeds(num_seeds=20, seed=42):
     """Generates a list of random seeds.
@@ -77,7 +77,7 @@ def build_slot_prompt_without_instruction(current_trial: int, past_trials: list,
 
     # Add history of past trials to the prompt
     for past_trial in recent_trials:
-        prompt += f"You press <<{past_trial['choice']}> and get {past_trial['reward']} points.\n"
+        prompt += f"You press <<{past_trial['choice']}>>.\n"
 
     # Add the current choice prompt
     prompt += f"You press <<"
@@ -228,7 +228,8 @@ def main():
     torch.cuda.empty_cache()  # Clear GPU memory again
     pipe=create_text_generation_pipeline(model,tokenizer,max_new_tokens=1)
     test_cases=['zero-shot','last-trial','without_task_prompt']
-    for test in test_cases:
+    test_cases_no_choice=['without_task_prompt']
+    for test in test_cases_no_choice:
         if test == 'zero-shot':
             build_slot_prompt = build_slot_prompt_zeroshot
         elif test == 'last-trial':
@@ -237,7 +238,7 @@ def main():
             build_slot_prompt = build_slot_prompt_without_instruction
 
         #create test folder
-        test_folder = f"data/out/{MODEL}_{test}/singles"
+        test_folder = f"data/out/{MODEL}_{test}_no_rewards/singles"
         os.makedirs(test_folder, exist_ok=True)
 
         # Run simulation for each seed
