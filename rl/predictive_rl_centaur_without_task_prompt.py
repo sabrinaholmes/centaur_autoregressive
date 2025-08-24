@@ -11,7 +11,7 @@ import gc
 
 DATA_IN_TEST = 'data/in/test_data.csv'
 
-MODEL = 'centaur-8B'
+MODEL = 'centaur-70B'
 DATA_FOLDER_OUT = f'data/out/predictive_without_task_and_choice/{MODEL}/singles'
 
 def generate_seeds(num_seeds=20, seed=42):
@@ -119,6 +119,25 @@ def build_slot_prompt_zeroshot(current_trial: int, past_trials: list, total_tria
     prompt += f"You press <<"
     return prompt
 
+def build_slot_prompt_no_reward(current_trial: int, past_trials: list, total_trials: int) -> str:
+    """Builds the prompt for the current trial with past trial data."""
+    recent_trials = past_trials
+    prompt = (
+              "In this task, you have to repeatedly choose between two slot machines labeled U and P.\n"
+              "You can choose a slot machine by pressing its corresponding key."
+              "When you select one of the machines, you will win 1 or 0 points."
+              "Your goal is to choose the slot machines that will give you the most points."
+              "You will receive feedback about the outcome after making a choice.\n"
+              "The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine."
+              f"You will play 1 game in total, consisting of {total_trials} trials."
+            f" Game 1:"
+    )
+    # Add history of past trials to the prompt
+    for past_trial in recent_trials:
+        prompt += f"You press <<{past_trial['choice']}>>.\n"
+    # Add the current choice prompt
+    prompt += f"You press <<"
+    return prompt
 
 def fix_seed(seed: int):
     """Fixes the random seed for reproducibility."""
@@ -165,7 +184,7 @@ def simulate_participant(df_participant: pd.DataFrame, build_slot_prompt, model,
         prompt = build_slot_prompt(trial_num, past_trials, total_trials)
 
          # --- Run model on prompt ---
-        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+        inputs = tokenizer(text=prompt, return_tensors="pt").to(model.device)
         with torch.no_grad():
             outputs = model(**inputs)
 
@@ -235,14 +254,17 @@ def main():
 }
     test_cases=['zero-shot','last-trial','without_task_prompt']
     test_cases_no_choice=['without_task_prompt']
-    for test in test_cases_no_choice:
+    test_cases_no_reward=['no_reward']
+    for test in test_cases_no_reward:
         if test == 'zero-shot':
             build_slot_prompt = build_slot_prompt_zeroshot
         elif test == 'last-trial':
             build_slot_prompt = build_slot_prompt_last_trial
         elif test == 'without_task_prompt':
             build_slot_prompt = build_slot_prompt_without_instruction
-    
+        elif test == 'no_reward':
+            build_slot_prompt = build_slot_prompt_no_reward
+
         #create test folder
         test_folder = f"data/out/predictive/{MODEL}_{test}_without_rewards/singles"
         os.makedirs(test_folder, exist_ok=True)

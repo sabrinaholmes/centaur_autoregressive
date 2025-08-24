@@ -8,7 +8,7 @@ import os
 import gc
 
 
-MODEL = 'centaur-70B'
+MODEL = 'centaur-8B'
 
 def generate_seeds(num_seeds=20, seed=42):
     """Generates a list of random seeds.
@@ -121,6 +121,27 @@ def build_slot_prompt_zeroshot(current_trial: int, past_trials: list, total_tria
     # Add the current choice prompt
     prompt += f"You press <<"
     return prompt
+def build_slot_prompt_no_reward(current_trial: int, past_trials: list, total_trials: int) -> str:
+    """Builds the prompt for the current trial with past trial data."""
+    recent_trials = past_trials
+    prompt = (
+              "In this task, you have to repeatedly choose between two slot machines labeled U and P.\n"
+              "You can choose a slot machine by pressing its corresponding key."
+              "When you select one of the machines, you will win 1 or 0 points."
+              "Your goal is to choose the slot machines that will give you the most points."
+              "You will receive feedback about the outcome after making a choice.\n"
+              "The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine."
+              f"You will play 1 game in total, consisting of {total_trials} trials."
+            f" Game 1:"
+    )
+    # Add history of past trials to the prompt
+    for past_trial in recent_trials:
+        prompt += f"You press <<{past_trial['choice']}>>.\n"
+
+    # Add the current choice prompt
+    prompt += f"You press <<"
+    return prompt
+
 
 def generate_timeline(num_trials=100, seed=42):
     """Generates a timeline of trials for the slot machine task.
@@ -227,15 +248,18 @@ def main():
     model._past = None  # Reset past states if necessary
     torch.cuda.empty_cache()  # Clear GPU memory again
     pipe=create_text_generation_pipeline(model,tokenizer,max_new_tokens=1)
-    test_cases=['zero-shot','last-trial','without_task_prompt']
+    test_cases=['zero-shot','last-trial','without_task_prompt','no_reward']
     test_cases_no_choice=['without_task_prompt']
-    for test in test_cases_no_choice:
+    test_cases_no_reward=['no_reward']
+    for test in test_cases_no_reward:
         if test == 'zero-shot':
             build_slot_prompt = build_slot_prompt_zeroshot
         elif test == 'last-trial':
             build_slot_prompt = build_slot_prompt_last_trial
         elif test == 'without_task_prompt':
             build_slot_prompt = build_slot_prompt_without_instruction
+        elif test == 'no_reward':
+            build_slot_prompt = build_slot_prompt_no_reward
 
         #create test folder
         test_folder = f"data/out/{MODEL}_{test}_no_rewards/singles"
