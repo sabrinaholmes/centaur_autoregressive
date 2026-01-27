@@ -1,6 +1,6 @@
 import os
 import glob
-
+from unsloth import FastLanguageModel
 from collections import defaultdict
 from transformers import pipeline, AutoModelForCausalLM, AutoTokenizer
 
@@ -40,6 +40,22 @@ def get_model_no_pipe(name):
 
     return model, tokenizer
 
+def get_model_no_pipe_unsloth(name):
+    if name not in MODEL_PATHS:
+        raise ValueError(f"Model name '{name}' not recognized. Available models: {list(MODEL_PATHS.keys())}")
+    path = MODEL_PATHS[name]
+    model, tokenizer = FastLanguageModel.from_pretrained(
+        model_name=path,
+        max_seq_length=32768,
+        dtype=None,
+        load_in_4bit=True,  # Same as original
+    )
+    # Ensure deterministic inference behavior (disable dropout etc.)
+    try:
+        model.eval()
+    except Exception:
+        pass
+    return model, tokenizer
 
 def get_model(
         name
