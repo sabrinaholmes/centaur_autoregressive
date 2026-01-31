@@ -1,28 +1,32 @@
 #!/bin/bash
-#SBATCH --job-name=rl
-#SBATCH --partition=A100-80GB
-#SBATCH --output=logs/rl%j.log
-#SBATCH --time=6:00:00
-#SBATCH --mem=400gb
+#SBATCH --job-name=rl_centaur
+#SBATCH --partition=gpu
 #SBATCH --ntasks=1
-#SBATCH --gpus=2
-#SBATCH --gpus-per-task=2
-#SBATCH --cpus-per-task=30
-#SBATCH --gpu-bind=none
-#SBATCH --mail-user=sana04@dfki.de
-#SBATCH --mail-type=ALL
+#SBATCH --cpus-per-task=32
+#SBATCH --mem=256G
+#SBATCH --time=04:00:00
+#SBATCH --gres=gpu:A100:2
+#SBATCH --output=logs/%x-%j.out
+#SBATCH --error=logs/%x-%j.err
 
-source $HOME/.bashrc
 
-# Run everything inside the container
-srun \
-  --container-image=/enroot/nvcr.io_nvidia_pytorch_23.12-py3.sqsh \
-  --container-workdir="$PWD" \
-  --container-mounts=/netscratch/$USER:/netscratch/$USER,/ds:/ds:ro,"$(dirname "$PWD")":"$(dirname "$PWD")" \
- \
-  bash -c "
-    echo 'Activating virtual environment' &&
-    source ../.env/bin/activate &&
-    echo 'Running script...' &&
-    python rl_centaur_one_without_task_prompt.py \
-  "
+# Read the token from token.txt
+TOKEN=$(cat token.txt)
+#echo "Read token
+echo "Read token: $TOKEN"
+# Export the token as an environment variable
+export HF_TOKEN="$TOKEN"
+# Debugging: Print the current working directory and environment
+echo "Current working directory: $(pwd)"
+# 1. Load the tool from Spack
+spack load miniconda3
+
+# 2. Source the conda profile so the 'activate' command works
+# Note: The path below is the standard one for Spack-installed Miniconda
+source $(spack location -i miniconda3)/etc/profile.d/conda.sh
+
+# 3. Now you can activate and run
+conda activate unsloth_env
+echo "Conda environment 'unsloth_env' activated."
+
+srun python predictive_rl_centaur.py

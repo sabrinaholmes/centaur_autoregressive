@@ -10,8 +10,8 @@ import os
 
 DATA_IN_TEST = 'data/in/test_data.csv'
 
-MODEL = 'centaur-8B'
-DATA_FOLDER_OUT = f'data/out/predictive/{MODEL}/singles'
+MODEL = 'centaur-70B'
+DATA_FOLDER_OUT = f'data/out/predictive_unsloth/{MODEL}/singles'
 
 
 
@@ -31,7 +31,7 @@ def build_slot_prompt(past_trials: list, total_trials: int) -> str:
 
     # Add history of past trials to the prompt
     for past_trial in recent_trials:
-        prompt += f"You press <<{past_trial['choice']}> and get {past_trial['reward']} points.\n"
+        prompt += f"You press <<{past_trial['choice']}>> and get {past_trial['reward']} points.\n"
 
     # Add the current choice prompt
     prompt += f"You press <<"
