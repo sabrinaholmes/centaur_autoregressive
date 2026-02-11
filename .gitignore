@@ -7,3 +7,14 @@ __pycache__
 
 #ignore clusters log
 logs/
+# ignore unsloth cashes
+unsloth_compiled_cache/
+
+# ignore run_batch_dummy.sh
+run_batch_dummy.sh
+#ignore test_code.py
+test_code.py
+# ignore .vscode settings
+.vscode/
+# ignore token
+token.txt
