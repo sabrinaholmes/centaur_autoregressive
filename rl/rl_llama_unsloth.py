@@ -9,7 +9,7 @@ import os
 import gc
 
 
-MODEL = 'centaur-70B-adapter'  # Change this to the desired model name
+MODEL = 'llama-70B-adapter'  # Change this to the desired model name
 DATA_FOLDER_OUT = f'data/out/{MODEL}_unsloth_seeds/singles'
 
 def generate_seeds(num_seeds=20, seed=42):
@@ -52,28 +52,48 @@ def create_text_generation_pipeline(model, tokenizer, temperature=1.0, max_new_t
     )
 
 
-def build_slot_prompt(past_trials: list, total_trials: int) -> str:
-    """Builds the prompt for the current trial with past trial data."""
-    recent_trials = past_trials
-    prompt = (
-              "In this task, you have to repeatedly choose between two slot machines labeled U and P.\n"
-              "You can choose a slot machine by pressing its corresponding key."
-              "When you select one of the machines, you will win 1 or 0 points."
-              "Your goal is to choose the slot machines that will give you the most points."
-              "You will receive feedback about the outcome after making a choice.\n"
-              "The environment may change unpredictably, and past success does not guarantee future results. You’ll need to adapt to these changes to keep finding the better machine."
-              f"You will play 1 game in total, consisting of {total_trials} trials."
-            f" Game 1:"
+def extract_model_choice(raw_response: str) -> str:
+    """
+    Extracts choice from model's raw response text
+    Handles common variations while maintaining strict validation
+    """
+    # Clean up the raw response by removing leading/trailing whitespace and quotes
+    cleaned_response = raw_response.strip().strip('"')
+    return cleaned_response
+
+def format_past_trials(past_trials: list) -> str:
+    """Formats past trial data for the prompt by listing choice, reward, and cumulative reward."""
+    return "".join(
+        f"Trial {trial['trial']}:Choice {trial['choice']}  → {trial['reward']} points ;"
+        for trial in past_trials
     )
 
-    # Add history of past trials to the prompt
-    for past_trial in recent_trials:
-        prompt += f"You press <<{past_trial['choice']}>> and get {past_trial['reward']} points.\n"
+def build_slot_prompt(current_trial: int, past_trials: list, total_trials: int) -> str:
+    formatted_trials = format_past_trials(past_trials)
 
-    # Add the current choice prompt
-    prompt += f"You press <<"
-    return prompt
+    return f"""<|begin_of_text|>
+<|start_header_id|>system<|end_header_id|>
+In this task, you have to repeatedly choose between two slot machines labeled U and P.\n
+When you select one of the machines, you will win 1 or 0 points. \n
+Your goal is to choose the slot machines that will give you the most points.
+You will receive feedback about the outcome after making a choice.\n
+The environment may change unpredictably, and past success does not guarantee future results.
+You’ll need to adapt to these changes to keep finding the better machine.
+You will play 1 game in total, consisting of 100 trials.
+<|eot_id|>
+<|start_header_id|>user<|end_header_id|>
+# Task Parameters
+- Game 1:
+- Trial {current_trial} of {total_trials}
 
+# History
+{formatted_trials}
+
+# Instructions
+Respond with **only** one character: 'U' or 'P'. No punctuation, no quotes, no explanation.
+
+Answer:<|start_header_id|>assistant<|end_header_id|>
+"""
 
 def generate_timeline(num_trials=100, seed=42):
     """Generates a timeline of trials for the slot machine task.
@@ -137,12 +157,13 @@ def simulate_participant(timeline: list, pipe: transformers.pipeline) -> pd.Data
 
     for trial in range(1,total_trials+1):
         current_trial_data = timeline[trial - 1]  # Ensure `timeline` is defined
-        prompt_model = build_slot_prompt(history, total_trials)
+        prompt_model = build_slot_prompt(trial, history, total_trials)
         bandit_1_value = current_trial_data["bandit_1"]["value"]
         bandit_2_value = current_trial_data["bandit_2"]["value"]
         #print(f"this is {prompt_model}")
-        model_choice = generate(prompt_model,pipe)
+        choice_raw = generate(prompt_model,pipe)
         #print(f"this is choice raw {choice_raw}")
+        model_choice = extract_model_choice(choice_raw)
         print(f"this is model choice {model_choice}")
 
         # Determine reward

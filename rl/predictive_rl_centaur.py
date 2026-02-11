@@ -10,8 +10,8 @@ import os
 
 DATA_IN_TEST = 'data/in/test_data.csv'
 
-MODEL = 'centaur-70B'
-DATA_FOLDER_OUT = f'data/out/predictive_unsloth/{MODEL}/singles'
+MODEL = 'centaur-70B-adapter'
+DATA_FOLDER_OUT = f'data/out/predictive_unsloth/{MODEL}_trial_wise/singles'
 
 
 
@@ -154,7 +154,81 @@ def simulate_participant(df_participant: pd.DataFrame, model, tokenizer, pipe, l
 
     return per_trial_results, overall_nll
 
+def simulate_participant_trial_wise(df_participant: pd.DataFrame, model, tokenizer,letter_token_ids):
+    """Simulates a participant with log-likelihood tracking"""
+    history = []
+    cumulative_reward = 0
+    total_trials = len(df_participant)
 
+
+    for trial in range(total_trials):
+        row = df_participant.iloc[trial]
+        trial_num = row['trial']
+        human_choice = row['choice']
+        reward = row['reward']
+        cumulative_reward += reward
+
+        # Build prompt using actual human history
+        past_trials = []
+        for past_idx in range(trial):
+            past_row = df_participant.iloc[past_idx]
+            past_trials.append({
+                "trial": past_row['trial'],
+                "choice": past_row['choice'],
+                "reward": past_row['reward'],
+                "cumulative_reward": df_participant.iloc[:past_idx+1]['reward'].sum()
+            })
+
+        prompt = build_slot_prompt(past_trials, total_trials)
+
+         # --- Run model on prompt ---
+        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+        with torch.no_grad():
+            outputs = model(**inputs)
+
+        logits = outputs.logits[0, -1]
+        probs = F.softmax(logits, dim=-1)
+        pred_token_id = torch.argmax(probs).item()
+        # Top-k tokens
+        # Top-2 tokens and their probabilities
+        topk = torch.topk(probs, k=2)
+        top2_tokens = []
+        for idx, prob in zip(topk.indices, topk.values):
+            decoded_token = tokenizer.decode(idx.item()).strip()
+            top2_tokens.append({
+                "token": decoded_token,
+                "prob": prob.item()
+            })
+
+
+        # --- Map to model choice (U or P) ---
+        token_id_to_letter = {v: k for k, v in letter_token_ids.items()}
+        model_choice = token_id_to_letter.get(pred_token_id, "INVALID")
+        # --- Log-likelihood of human’s actual choice ---
+        log_likelihood = None
+        if human_choice in letter_token_ids:
+            user_token_id = letter_token_ids[human_choice]
+            log_likelihood = torch.log(probs[user_token_id] + 1e-8).item() # Fixed: Use token ID for indexing
+
+        # --- Get the actual reward (from human data) ---
+        # The reward is already taken from the dataframe at the beginning of the loop
+        # reward = df.loc[df["trial"] == trial, "reward"].values[0]
+        # cumulative_reward += reward # Cumulative reward is updated earlier
+
+        history.append({
+            "trial": trial,
+            "prompt": prompt,
+            "model_choice": model_choice,
+            "human_choice": human_choice,
+            "reward": reward,
+            "cumulative_reward": cumulative_reward,
+            "log_likelihood": log_likelihood,
+            "top2_tokens": top2_tokens
+        })
+        print(f"Trial {trial}: Human {human_choice}, Model {model_choice}, LL: {log_likelihood}")
+    valid_lls = [item['log_likelihood'] for item in history if item['log_likelihood'] is not None]
+    overall_nll = -sum(valid_lls) / len(valid_lls) if valid_lls else float('inf')
+    return pd.DataFrame(history),overall_nll
 
 def main():
 
@@ -166,6 +240,10 @@ def main():
     timeline['choice'] = timeline['choice'].map({0: 'U', 1: 'P'})
     overall_nlls = []
     model_ids = timeline['model_id'].unique()
+    letter_token_ids = {
+    "U": tokenizer("U", add_special_tokens=False)['input_ids'][0],
+    "P": tokenizer("P", add_special_tokens=False)['input_ids'][0],
+}
     for model_id in model_ids:
         print(f"\n🧠 Simulating model {model_id}")
         out_path = f'{DATA_FOLDER_OUT}/model_' + str(model_id) + '.csv'
@@ -176,7 +254,7 @@ def main():
 
         # Run simulation with model and tokenizer passed
         model_data = timeline[timeline['model_id'] == model_id]
-        trial_results,overall_nll=simulate_participant(model_data, model , tokenizer, None, None)
+        trial_results,overall_nll=simulate_participant_trial_wise(model_data, model , tokenizer,letter_token_ids)
         overall_nlls.append(overall_nll)
         # Save results
         df_results = pd.DataFrame(trial_results)

@@ -1,19 +1,26 @@
 #!/bin/bash
-#SBATCH --job-name=rl_centaur
+#SBATCH --job-name=no_reward_rl_llama_unsloth
 #SBATCH --partition=gpu
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=32
-#SBATCH --mem=256G
-#SBATCH --time=04:00:00
-#SBATCH --gres=gpu:A100:2
+#SBATCH --mem=400G
+#SBATCH --time=01:00:00
+#SBATCH --gres=gpu:A100:1
 #SBATCH --output=logs/%x-%j.out
 #SBATCH --error=logs/%x-%j.err
+
+# --- 1. Fix Storage Paths (Prevents No Space Left Error) ---
+export HF_HOME="/share/users/student/s/snamazova/.cache/huggingface"
+export TMPDIR="/share/users/student/s/snamazova/tmp"
+export PIP_CACHE_DIR="/share/users/student/s/snamazova/.cache/pip"
+
+# Ensure directories exist before the script starts
+mkdir -p $HF_HOME $TMPDIR $PIP_CACHE_DIR logs
 
 
 # Read the token from token.txt
 TOKEN=$(cat token.txt)
-#echo "Read token
-echo "Read token: $TOKEN"
+
 # Export the token as an environment variable
 export HF_TOKEN="$TOKEN"
 # Debugging: Print the current working directory and environment
@@ -29,4 +36,4 @@ source $(spack location -i miniconda3)/etc/profile.d/conda.sh
 conda activate unsloth_env
 echo "Conda environment 'unsloth_env' activated."
 
-srun python predictive_rl_centaur.py
+srun python predictive_rl_llama_unsloth.py

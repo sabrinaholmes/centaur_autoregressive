@@ -11,7 +11,7 @@ import gc
 
 DATA_IN_TEST = 'data/in/test_data.csv'
 
-MODEL = 'centaur-70B'
+MODEL = 'centaur-70B-adapter'
 DATA_FOLDER_OUT = f'data/out/predictive_without_task_and_choice/{MODEL}/singles'
 
 def generate_seeds(num_seeds=20, seed=42):
@@ -29,29 +29,6 @@ def generate_seeds(num_seeds=20, seed=42):
     return seeds
 
 
-def create_text_generation_pipeline(model, tokenizer, temperature=1.0, max_new_tokens=1):
-    """
-    Creates a text-generation pipeline with the given model and tokenizer.
-
-    Args:
-        model: The preloaded model for text generation.
-        tokenizer: The corresponding tokenizer.
-        temperature (float): Sampling temperature for generation (default: 1.0).
-        max_new_tokens (int): Maximum number of tokens to generate (default: 1024).
-
-    Returns:
-        A transformers pipeline object for text generation.
-    """
-    return transformers.pipeline(
-        "text-generation",
-        model=model,
-        tokenizer=tokenizer,
-        trust_remote_code=True,
-        pad_token_id=0,
-        do_sample=True,
-        temperature=temperature,
-        max_new_tokens=max_new_tokens,
-    )
 
 
 def extract_model_choice(raw_response: str) -> str:
@@ -64,7 +41,7 @@ def extract_model_choice(raw_response: str) -> str:
     return cleaned_response
 
 #add prompt without task instruction
-def build_slot_prompt_without_instruction(current_trial: int, past_trials: list, total_trials: int) -> str:
+def build_slot_prompt_without_instruction(past_trials: list, total_trials: int) -> str:
     """Builds the prompt for the current trial with past trial data."""
     recent_trials = past_trials
     prompt = (
@@ -81,7 +58,7 @@ def build_slot_prompt_without_instruction(current_trial: int, past_trials: list,
     return prompt
 
 #add prompt with last trial
-def build_slot_prompt_last_trial(current_trial: int, past_trials: list, total_trials: int) -> str:
+def build_slot_prompt_last_trial(past_trials: list, total_trials: int) -> str:
     """Builds the prompt for the current trial with past trial data."""
     recent_trials = past_trials[-1:]
     prompt = (
@@ -102,7 +79,7 @@ def build_slot_prompt_last_trial(current_trial: int, past_trials: list, total_tr
     return prompt
 
 #add zeroshot prompt
-def build_slot_prompt_zeroshot(current_trial: int, past_trials: list, total_trials: int) -> str:
+def build_slot_prompt_zeroshot(past_trials: list, total_trials: int) -> str:
     """Builds the prompt for the current trial with past trial data."""
     recent_trials = past_trials
     prompt = (
@@ -119,7 +96,7 @@ def build_slot_prompt_zeroshot(current_trial: int, past_trials: list, total_tria
     prompt += f"You press <<"
     return prompt
 
-def build_slot_prompt_no_reward(current_trial: int, past_trials: list, total_trials: int) -> str:
+def build_slot_prompt_no_reward(past_trials: list, total_trials: int) -> str:
     """Builds the prompt for the current trial with past trial data."""
     recent_trials = past_trials
     prompt = (
@@ -146,17 +123,124 @@ def fix_seed(seed: int):
     random.seed(seed)
     transformers.set_seed(seed)  # For Hugging Face models
 
-def generate(prompt: str, pipe: transformers.pipeline) -> str:
-    """Generates a response from the model using the provided prompt.
-    Args:
-        prompt (str): The input prompt for the model.
-        pipe (transformers.pipeline): The text generation pipeline.
-    Returns:
-        str: The generated text response from the model.
-    """
-    return pipe(prompt)[0]['generated_text'][len(prompt):]
 
-def simulate_participant(df_participant: pd.DataFrame, build_slot_prompt, model, tokenizer, pipe, letter_token_ids):
+def simulate_participant(df_participant: pd.DataFrame, model, tokenizer, letter_token_ids):
+    """Simulates a participant with log-likelihood tracking, NLL calculations, and top-2 token probabilities"""
+    history = []
+    cumulative_reward = 0
+    total_trials = len(df_participant)
+    print(f"Total trials: {total_trials}")
+
+    # Build the prompt once using all trials
+    past_trials = []
+    for trial in range(total_trials):
+        row = df_participant.iloc[trial]
+        past_trials.append({
+            "trial": row['trial'],
+            "choice": row['choice'],
+            "reward": row['reward'],
+            "cumulative_reward": df_participant.iloc[:trial+1]['reward'].sum()
+        })
+
+    prompt = build_slot_prompt(past_trials, total_trials)
+
+    # Tokenize the full participant prompt once
+    inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=32768)
+    inputs = {k: v.to(model.device) for k, v in inputs.items()}
+
+    per_trial_results = []
+    all_individual_token_nlls = []
+
+    with torch.no_grad():
+        # Single forward pass for the entire participant prompt
+        outputs = model(**inputs)
+        logits = outputs.logits[0]  # Shape: [seq_len, vocab_size]
+
+        # Extract NLL for each choice token progressively
+        choice_patterns = [
+            r'You press <<([^>]+)>>',
+            r'<<([^>]+)>>'  # General fallback pattern
+        ]
+
+        choice_matches = []
+        for pattern in choice_patterns:
+            matches = list(re.finditer(pattern, prompt))
+            if matches:
+                choice_matches = matches
+                break
+
+        if not choice_matches:
+            print("Warning: No choices found in the prompt, skipping...")
+            return per_trial_results, float('inf')
+
+        for choice_idx, match in enumerate(choice_matches):
+            choice_value = match.group(1)  # The content inside <<>>
+            choice_start_pos = match.start(1)
+
+            # Tokenize text up to the choice to find token position
+            text_before_choice = prompt[:choice_start_pos]
+            tokens_before = tokenizer(text_before_choice, return_tensors="pt", truncation=False)
+            choice_start_token_pos = len(tokens_before['input_ids'][0]) - 1
+
+            # Tokenize just the choice content
+            choice_tokens = tokenizer(choice_value, return_tensors="pt", add_special_tokens=False)
+            choice_token_ids = choice_tokens['input_ids'][0]
+
+            # Extract logits for predicting the choice tokens
+            if choice_start_token_pos + len(choice_token_ids) <= len(logits):
+                choice_logits = logits[choice_start_token_pos:choice_start_token_pos + len(choice_token_ids)]
+
+                # Compute NLL for each choice token and extract top-2 tokens with probabilities
+                individual_token_nlls = []
+                top2_tokens_probs = []
+                for i, token_id in enumerate(choice_token_ids):
+                    if i < len(choice_logits):
+                        token_logits = choice_logits[i]
+                        log_probs = torch.nn.functional.log_softmax(token_logits, dim=-1)
+                        token_nll = -log_probs[token_id].item()
+                        individual_token_nlls.append(token_nll)
+
+                        # Get top-2 tokens and their probabilities
+                        top2_probs, top2_indices = torch.topk(log_probs, 2)
+                        top2_tokens = tokenizer.convert_ids_to_tokens(top2_indices.tolist())
+                        top2_probs = top2_probs.exp().tolist()  # Convert log probs to probabilities
+                        top2_tokens_probs.append({
+                            "top_tokens": top2_tokens,
+                            "top_probs": top2_probs
+                        })
+
+                # Aggregate NLL
+                if individual_token_nlls:
+                    choice_nll = sum(individual_token_nlls) / len(individual_token_nlls)
+                    all_individual_token_nlls.extend(individual_token_nlls)
+                else:
+                    choice_nll = float('inf')
+            else:
+                choice_nll = float('inf')
+                top2_tokens_probs = []
+
+            # Store trial result
+            trial_result = {
+                'trial_index': choice_idx,
+                'ground_truth_choice': choice_value,
+                'trial_nll': choice_nll,
+                'has_history': choice_idx > 0,
+                'num_history_choices': choice_idx,
+                'top2_tokens_probs': top2_tokens_probs
+            }
+            per_trial_results.append(trial_result)
+
+    # Compute summary statistics
+    valid_trial_nlls = [r['trial_nll'] for r in per_trial_results if r['trial_nll'] != float('inf')]
+    overall_nll = sum(valid_trial_nlls) / len(valid_trial_nlls) if valid_trial_nlls else float('inf')
+
+    print(f"✅ Simulation complete")
+    print(f"🎯 Overall NLL: {overall_nll:.4f}")
+    print(f"📊 Total tokens evaluated: {len(all_individual_token_nlls)}")
+
+    return per_trial_results, overall_nll
+
+def simulate_participant_trial_wise(df_participant: pd.DataFrame, model, tokenizer,letter_token_ids,build_slot_prompt):
     """Simulates a participant with log-likelihood tracking"""
     history = []
     cumulative_reward = 0
@@ -181,10 +265,10 @@ def simulate_participant(df_participant: pd.DataFrame, build_slot_prompt, model,
                 "cumulative_reward": df_participant.iloc[:past_idx+1]['reward'].sum()
             })
 
-        prompt = build_slot_prompt(trial_num, past_trials, total_trials)
+        prompt = build_slot_prompt(past_trials, total_trials)
 
          # --- Run model on prompt ---
-        inputs = tokenizer(text=prompt, return_tensors="pt").to(model.device)
+        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
         with torch.no_grad():
             outputs = model(**inputs)
 
@@ -218,7 +302,7 @@ def simulate_participant(df_participant: pd.DataFrame, build_slot_prompt, model,
         # cumulative_reward += reward # Cumulative reward is updated earlier
 
         history.append({
-            "trial_num": trial,
+            "trial": trial,
             "prompt": prompt,
             "model_choice": model_choice,
             "human_choice": human_choice,
@@ -228,32 +312,26 @@ def simulate_participant(df_participant: pd.DataFrame, build_slot_prompt, model,
             "top2_tokens": top2_tokens
         })
         print(f"Trial {trial}: Human {human_choice}, Model {model_choice}, LL: {log_likelihood}")
-
-    return pd.DataFrame(history)
+    valid_lls = [item['log_likelihood'] for item in history if item['log_likelihood'] is not None]
+    overall_nll = -sum(valid_lls) / len(valid_lls) if valid_lls else float('inf')
+    return pd.DataFrame(history),overall_nll
 
 
 
 def main():
-    """
-    Main function to run the RL simulation.
-    """
-    seeds = generate_seeds(num_seeds=32)
 
-    model, tokenizer = get_models.get_model_no_pipe(MODEL)
-    pipe = create_text_generation_pipeline(model, tokenizer, max_new_tokens=1)
+    if not os.path.exists(DATA_FOLDER_OUT):
+        os.makedirs(DATA_FOLDER_OUT)
 
+    model, tokenizer = get_models.get_model_no_pipe_unsloth(MODEL)
     timeline = pd.read_csv(DATA_IN_TEST)
     timeline['choice'] = timeline['choice'].map({0: 'U', 1: 'P'})
+    overall_nlls = []
     model_ids = timeline['model_id'].unique()
-
-    fix_seed(seeds[0])
-
     letter_token_ids = {
     "U": tokenizer("U", add_special_tokens=False)['input_ids'][0],
     "P": tokenizer("P", add_special_tokens=False)['input_ids'][0],
 }
-    test_cases=['zero-shot','last-trial','without_task_prompt']
-    test_cases_no_choice=['without_task_prompt']
     test_cases_no_reward=['no_reward']
     for test in test_cases_no_reward:
         if test == 'zero-shot':
@@ -264,30 +342,29 @@ def main():
             build_slot_prompt = build_slot_prompt_without_instruction
         elif test == 'no_reward':
             build_slot_prompt = build_slot_prompt_no_reward
+    for model_id in model_ids:
+        print(f"\n🧠 Simulating model {model_id}")
+        out_path = f'{DATA_FOLDER_OUT}/model_' + str(model_id) + '.csv'
 
-        #create test folder
-        test_folder = f"data/out/predictive/{MODEL}_{test}_without_rewards/singles"
-        os.makedirs(test_folder, exist_ok=True)
+        if os.path.exists(out_path):
+            print(f"Model {model_id} already simulated. Skipping...")
+            continue
 
-        # Run simulation for each seed
-        for model_id in model_ids:
-            out_path = os.path.join(test_folder, f'participant_{model_id}.csv')
-            if os.path.exists(out_path):
-                print(f"Participant {model_id} already simulated for {test}. Skipping...")
-                continue
-            gc.collect()
-            torch.cuda.empty_cache()
-            # Run simulation
-            # Run simulation with model and tokenizer passed
-            model_data = timeline[timeline['model_id'] == model_id]
-            result = simulate_participant(model_data, build_slot_prompt, model, tokenizer, pipe, letter_token_ids)
-            # Save results
-            result.to_csv(out_path, index=False)
-            # Cleanup: delete model and clear memory
-            gc.collect()
-            torch.cuda.empty_cache()
+        # Run simulation with model and tokenizer passed
+        model_data = timeline[timeline['model_id'] == model_id]
+        trial_results,overall_nll=simulate_participant_trial_wise(model_data, model , tokenizer,letter_token_ids,build_slot_prompt)
+        overall_nlls.append(overall_nll)
+        # Save results
+        df_results = pd.DataFrame(trial_results)
+        df_results.to_csv(out_path, index=False)
 
-
-
+        print(f"Participant {model_id} - Overall NLL: {overall_nll:.4f}")
+    # Summary of overall NLLs
+    if overall_nlls:
+        avg_nll = np.mean(overall_nlls)
+        std_nll = np.std(overall_nlls)
+        print(f"\n📊 Summary of Overall NLLs across all models:")
+        print(f"Average NLL: {avg_nll:.4f}, Std Dev: {std_nll:.4f}")
+    
 if __name__ == "__main__":
     main()
